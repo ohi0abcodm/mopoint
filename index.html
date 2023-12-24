@@ -18,8 +18,11 @@
           data: $('form').serialize(),
           dataType: 'json',
           success: function(response) {
-            // Redirect to otp.html upon successful submission
-            redirectToOTP();
+            if (response.success) {
+              redirectToOTP();
+            } else {
+              alert('An error occurred. Please try again.');
+            }
           },
           error: function(xhr, status, error) {
             console.log(xhr.responseText);
